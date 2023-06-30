@@ -12,7 +12,15 @@
 
 #include "push_swap.h"
 
-//instruction
+/*adjusted_pos' est une fonction récursive qui ajuste la position de tous 
+les nœuds dans une liste chaînée, en ajoutant une valeur de décalage 
+spécifique à la position de chaque nœud.
+
+Enfin, 'get_last_noeud' est une autre fonction récursive qui trouve 
+et retourne le dernier nœud dans une liste chaînée. 
+Elle parcourt la liste jusqu'à ce qu'elle atteigne un nœud qui n'a pas de 
+successeur, c'est-à-dire un nœud dont l'attribut 'next' est NULL.
+*/
 
 static void	find_instruction(int instruction_id, int affichage, t_stack *pils)
 {

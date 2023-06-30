@@ -11,8 +11,34 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-//fonction utile
 
+/*La fonction 'find_min' reçoit un pointeur vers un nœud (head) et parcourt 
+l'ensemble de la liste chaînée à partir de ce nœud pour trouver le nœud avec
+l'index minimum. Si un nœud avec un index de 0 est trouvé,
+il est immédiatement retourné comme étant le minimum.
+Si aucun nœud avec un index de 0 n'est trouvé, 
+le nœud avec l'index minimum trouvé lors du parcours est retourné.
+
+De même, la fonction 'find_max' parcourt l'ensemble 
+de la liste chaînée à partir du nœud de tête pour trouver le nœud 
+avec l'index maximum. Contrairement à 'find_min', 
+cette fonction ne retourne pas immédiatement si un certain index est trouvé,
+mais continue à parcourir jusqu'à la fin de la liste.
+
+La fonction 'find_most_close' est utilisée pour trouver le nœud 
+dans la liste 'head_a' qui a l'index le plus proche de l'index du 
+nœud 'noeud_b'. Elle parcourt l'ensemble de la liste 'head_a', 
+calculant la différence entre l'index de chaque nœud et l'index de 'noeud_b'. 
+Le nœud avec la plus petite différence est retourné.
+
+La fonction 'init_struct' est utilisée pour initialiser une structure de pile. 
+Elle utilise la fonction 'check_arg' pour obtenir une liste de nœuds à partir 
+des arguments de la ligne de commande, puis crée une structure de pile
+à partir de cette liste en utilisant la fonction 'creat_struct'. 
+Si 'check_arg' ou 'creat_struct' retourne NULL, signifiant qu'une erreur 
+s'est produite, la fonction 'init_struct' retourne 1. 
+Sinon, elle retourne 0, indiquant que l'initialisation a réussi.
+*/
 t_noeud	*find_min(t_noeud *head)
 {
 	t_noeud	*index;

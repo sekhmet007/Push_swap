@@ -12,6 +12,26 @@
 
 #include "push_swap.h"
 
+/*petitQuick
+trie_fin(t_stack *p): cette fonction sert à finaliser le tri en déplaçant 
+les éléments de la pile b vers la pile a tout en maintenant la pile a triée.
+
+pre_trie(t_stack *p, int sezieme): cette fonction prépare le tri en effectuant 
+des opérations préliminaires de tri sur la pile a. 
+Cela semble se faire par le biais des fonctions trie_mediane_min et 
+trie_mediane_max, qui ne sont pas définies dans le code fourni, 
+mais qui, comme leur nom l'indique, semblent manipuler des valeurs 
+médianes pour faciliter le tri.
+
+trie_f(t_stack *p): cette fonction finalise le tri en appelant la 
+fonction trie_fin jusqu'à ce que la pile b soit vide, 
+puis en faisant pivoter la pile a jusqu'à ce que le plus 
+petit élément soit au sommet.
+
+trie_rapide(t_stack *p): c'est la fonction principale de tri qui organise 
+le processus de tri en trois étapes : pré-tri, tri final,
+et ajustement final.
+*/
 static void	trie_fin(t_stack *p)
 {
 	t_noeud	*last_no;

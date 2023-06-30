@@ -12,7 +12,25 @@
 
 #include "push_swap.h"
 
-//ft_atoi  et check max et min int
+/*La fonction 'ft_atoi_check' convertit une chaîne de caractères 
+en un nombre entier tout en vérifiant si la conversion est possible. 
+Elle renvoie 1 si la chaîne ne peut pas être convertie en un entier, 
+2 si le nombre dépasse les limites des entiers signés, et 0 sinon.
+
+'error_arg' est une fonction récursive qui vérifie si un argument donné 
+peut être converti en un entier valide et non répété dans la pile. 
+Elle retourne 1 s'il y a une erreur et 0 sinon.
+
+La fonction 'create_and_link_node' crée un nouveau nœud avec une valeur 
+spécifiée, le lie à la liste chaînée et renvoie le nouveau nœud. 
+Elle utilise une structure 't_arg_manager' pour passer plusieurs paramètres.
+
+Enfin, 'check_arg' prend les arguments d'une ligne de commande, 
+les vérifie et les convertit en une liste chaînée de nœuds. 
+Elle utilise également la structure 't_arg_manager' 
+pour manipuler plusieurs paramètres. Elle renvoie la tête de 
+la liste chaînée créée.
+*/
 static int	ft_atoi_check(char *nptr)
 {
 	long	nbr;

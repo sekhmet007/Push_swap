@@ -12,6 +12,31 @@
 
 #include "push_swap.h"
 
+/*trie_quart_min(t_stack *p, int quartile): La fonction compare les index des 
+éléments sur la pile b au quartile fourni. Si l'index d'un élément est plus 
+grand ou plus petit que certaines limites autour du quartile, 
+elle exécute une instruction (PA ou RB). Cette fonction semble se concentrer 
+sur le tri des éléments du quartile inférieur.
+
+trie_seizieme_mid_extrem(t_stack *p, int huitieme): Cette fonction trie les 
+deux piles en fonction d'une fraction fournie de 1/8 (huitieme) du total 
+des éléments. Elle exécute certaines instructions (PA, PB, RB, RA ou RRB) 
+en fonction de la position des éléments par rapport aux limites 
+autour de cette fraction.
+
+trie_seizieme_min_mid(t_stack *p, int siezieme): Cette fonction tri la pile b 
+puis la pile a en fonction d'une fraction fournie de 1/16 (siezieme) 
+du total des éléments. Elle exécute certaines instructions (PA, RB, PB) 
+en fonction de la position des éléments par rapport aux limites 
+autour de cette fraction.
+
+trie_mediane_min(t_stack *p, int seizieme): Cette fonction trie les piles en 
+fonction d'une médiane fournie, qui est calculée comme 8 fois la 
+fraction de 1/16 (seizieme). Cette fonction se concentre sur le tri des 
+éléments qui sont en dessous de cette médiane. 
+Elle utilise les trois fonctions décrites ci-dessus pour diviser 
+davantage le problème en parties plus petites et les trier.
+*/
 static void	trie_quart_min(t_stack *p, int quartile)
 {
 	if (!p->b)
